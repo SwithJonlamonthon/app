@@ -1,0 +1,33 @@
+SELECT
+    TABLE_NAME,
+    COLUMN_NAME,
+    CONSTRAINT_NAME,
+    REFERENCED_TABLE_NAME,
+    REFERENCED_COLUMN_NAME
+FROM
+    INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE
+	REFERENCED_TABLE_SCHEMA = 'app_db'
+    AND REFERENCED_TABLE_NAME = 'user'
+    AND REFERENCED_COLUMN_NAME = 'idUser';
+
+For check relation
+
+SELECT * 
+FROM user u
+join wallet w 
+  on u.idUser = w.idwallet
+WHERE u.name = 'Swith' 
+  AND w.idwallet LIKE '1';
+
+For check relation in column
+INSERT INTO income (income, incomeid) VALUES ( '100',     (SELECT idUser from user WHERE name ='Swith') );
+Insert with condition
+
+ select user.name , wallet.idwallet , income.income from user,wallet , income where user.name = "Swith" and user.idUser = wallet.idwallet;
+
+update income , user set income.income ="100" where user.name = "Swith";      
+
+
+
+insert into outcome(outcomeid,outcome,date,type) values ("1","100","2001-12-19","cash");                     

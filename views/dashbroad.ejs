@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>design</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Inter.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="/assets/css/Account-setting-or-edit-profile.css">
+    <link rel="stylesheet" href="/assets/css/Dashboard-layout.css">
+    <link rel="stylesheet" href="/assets/css/Data-Table-styles.css">
+    <link rel="stylesheet" href="/assets/css/Data-Table.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form-styles.css">
+    <link rel="stylesheet" href="/assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="/assets/css/Soft-UI-Aside-Navbar.css">
+    <link rel="stylesheet" href="/assets/css/Stats-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"></a>
+            <div>
+                <div>
+                    <div class="dropdown show" style="color: rgb(244,238,238);font-size: 26px;font-weight: bold;"><a class="dropdown-toggle" aria-expanded="true" data-bs-toggle="dropdown" href="#" style="color: rgb(255,250,250);"><%= name %></a>
+                        <div class="dropdown-menu " data-bs-popper="none" style="color: rgb(149,36,36);"><a class="dropdown-item" href="/profile.html">Profile</a><a class="dropdown-item" href="/index.html">Logout</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4 py-xl-5">
+        <h1 style="text-align: center;">Dashboard</h1>
+    </div>
+    <div class="row gy-4 row-cols-2 row-cols-md-4" style="transform: perspective(2100px);display: flex;backdrop-filter: saturate(102%);filter: brightness(136%);">
+        <div class="col-lg-4">
+            <div class="text-center d-flex flex-column justify-content-center align-items-center py-3" style="margin-right: 0px;padding-right: 0px;">
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cash-coin">
+                        <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"></path>
+                        <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"></path>
+                        <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"></path>
+                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"></path>
+                    </svg></div>
+                <div class="px-3">
+                    <h2 class="fw-bold mb-0"><%=income%></h2>
+                    <p class="mb-0">Income</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><i class="fas fa-arrow-down" style="color: var(--bs-white);"></i></div>
+                <div class="px-3">
+                    <h2 class="fw-bold mb-0"><%=outcome%></h2>
+                    <p class="mb-0">Outcome</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-safe">
+                        <path d="M1 1.5A1.5 1.5 0 0 1 2.5 0h12A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 1 14.5V13H.5a.5.5 0 0 1 0-1H1V8.5H.5a.5.5 0 0 1 0-1H1V4H.5a.5.5 0 0 1 0-1H1V1.5zM2.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-12z"></path>
+                        <path d="M13.5 6a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zM4.828 4.464a.5.5 0 0 1 .708 0l1.09 1.09a3.003 3.003 0 0 1 3.476 0l1.09-1.09a.5.5 0 1 1 .707.708l-1.09 1.09c.74 1.037.74 2.44 0 3.476l1.09 1.09a.5.5 0 1 1-.707.708l-1.09-1.09a3.002 3.002 0 0 1-3.476 0l-1.09 1.09a.5.5 0 1 1-.708-.708l1.09-1.09a3.003 3.003 0 0 1 0-3.476l-1.09-1.09a.5.5 0 0 1 0-.708zM6.95 6.586a2 2 0 1 0 2.828 2.828A2 2 0 0 0 6.95 6.586z"></path>
+                    </svg></div>
+                <div class="px-3">
+                    <h2 class="fw-bold mb-0"><%=total%></h2>
+                    <p class="mb-0">Money in wallet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 44px;">
+        <div class="row">
+            <div class="col-md-4" style="text-align: center;"><a class="btn btn-primary" role="button" href="/dashbroad/<%= name %>/inout">Income / Outcome&nbsp;</a></div>
+            <div class="col-md-4" style="text-align: center;"><a class="btn btn-primary" role="button" href="/report.html">Report</a></div>
+            <div class="col-md-4" style="text-align: center;"><a class="btn btn-primary" role="button" style="margin-left: 80px;">Setting</a></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+    <script src="/assets/js/DataTable---Fully-BSS-Editable.js"></script>
+    <script src="/assets/js/bold-and-dark.js"></script>
+    <script src="/assets/js/Profile-Edit-Form.js"></script>
+</body>
+
+</html>
